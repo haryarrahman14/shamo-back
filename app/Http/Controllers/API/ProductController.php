@@ -52,7 +52,7 @@ class ProductController extends Controller
         );
     }
 
-    public function detail(Request $request, $id)
+    public function find(Request $request, $id)
     {
         $product = Product::with(['category', 'galleries'])->find($id);
 
