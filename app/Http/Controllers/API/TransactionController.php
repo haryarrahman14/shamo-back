@@ -14,7 +14,7 @@ class TransactionController extends Controller
         $limit = $request->input('limit', 6);
         $status = $request->input('status');
 
-        $transaction = Transaction::with(['items.product'])->where('user_id', $request->user()->id);
+        $transaction = Transaction::with(['items.product'])->where('users_id', $request->user()->id);
 
         if ($status) {
             $transaction->where('status', $status);
