@@ -18,3 +18,4 @@ Route::get('categories', [ProductCategoryController::class, 'all']);
 Route::get('categories/{id}', [ProductCategoryController::class, 'find']);
 
 Route::post('register', [UserController::class, 'register']);
+Route::post('login', [UserController::class, 'login']);
